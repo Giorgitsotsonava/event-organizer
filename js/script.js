@@ -1,14 +1,14 @@
-let menu =document.querySelector('#menu-bars');
-let navbar =document.querySelector('.navbar');
+let menu = document.querySelector('#menu-bars');
+let navbar = document.querySelector('.navbar');
 
-menu.onclick = () =>{
-    menu.classList.toggle ('fa-times');
-    navbar.classList.toggle ('active');
+menu.onclick = () => {
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
 }
 
-window.onscroll = () =>{
-    menu.classList.remove ('fa-times');
-    navbar.classList.remove ('active');
+window.onscroll = () => {
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
 }
 
 var swiper = new Swiper(".home-slider", {
@@ -17,15 +17,37 @@ var swiper = new Swiper(".home-slider", {
     centeredSlides: true,
     slidesPerView: "auto",
     coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
     },
-    loop:true,
-    autoplay:{
-        delay:3000,
-        disableoninteraction:false,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableoninteraction: false,
     }
-  });
+});
+
+var swiper = new Swiper(".review-slider", {
+    slidesPerView: 1,
+    grabCursor: true,
+    loop: true,
+    spacebetweeen: 10,
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        700: {
+            slidesPerView: 2,
+        },
+        1050: {
+            slidesPerView: 3,
+        },
+    },
+    autoplay: {
+        delay: 5000,
+        disableoninteraction: false,
+    }
+});
